@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurophy's Browser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="browser-header">
+        <div class="browser-logo">
+            <span class="logo-text">N</span>
+        </div>
+        
+        <div class="nav-controls">
+            <button id="back-btn" class="nav-btn" title="Back">‹</button>
+            <button id="forward-btn" class="nav-btn" title="Forward">›</button>
+            <button id="refresh-btn" class="nav-btn" title="Refresh">⟲</button>
+        </div>
+        
+        <div class="address-bar-container">
+            <div class="security-indicator">🔒</div>
+            <input type="text" id="address-bar" placeholder="Search with Nishanth's Browser - No Ads, No Tracking" />
+        </div>
+        
+        <div class="browser-actions">
+            <button id="new-tab-btn" class="action-btn" title="New Tab">+</button>
+            <button id="menu-btn" class="action-btn" title="Menu">⋮</button>
+        </div>
+    </div>
+    
+    <!-- Tab Bar -->
+    <div class="tab-bar" id="tab-bar">
+        <!-- Tabs will be dynamically created here -->
+    </div>
+    
+    <div class="status-bar">
+        <span class="status-text">🚫 Ads & Trackers Blocked</span>
+        <span class="status-text">🛡️ Neurophy - Ultimate Privacy Protection</span>
+        <span class="status-text">💜 Made with Love by Team Neurophy</span>
+    </div>
+
+    <script src="browser.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "name": "mini-project",
+  "productName": "MINI-PROJECT",
+  "version": "1.0.0",
+  "description": "MINI-PROJECT — Ultimate privacy browser with zero ads",
+  "main": "main.js",
+  "author": "Nishanth",
+  "license": "MIT",
+  "keywords": [
+    "browser",
+    "privacy",
+    "ad-blocker",
+    "nishanth",
+    "ultimate"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . \"MINI-PROJECT\" --overwrite",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.26.0",
+    "cross-fetch": "^4.0.0",
+    "electron-context-menu": "^4.1.1"
+  },
+  "build": {
+    "appId": "com.nishanth.miniproject",
+    "productName": "MINI-PROJECT",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "extendInfo": {
+        "CFBundleDisplayName": "MINI-PROJECT",
+        "CFBundleName": "MINI-PROJECT"
+      }
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "search-engine/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}

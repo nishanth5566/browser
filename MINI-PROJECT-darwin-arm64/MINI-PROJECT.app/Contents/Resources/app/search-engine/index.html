@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishanth Browser Search - Ultimate Privacy Search Engine</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <div class="search-container">
+        <div class="search-header">
+            <div class="logo-container">
+                <div class="logo">N</div>
+                <h1>Nishanth Browser Search</h1>
+            </div>
+            <p class="tagline">🛡️ Private • 🚫 No Ads • 🔒 Secure • 💜 Made by Nishanth</p>
+        </div>
+
+        <div class="search-box-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search the web with ultimate privacy..." autofocus>
+                <button id="search-btn">🔍</button>
+            </div>
+            
+            <div class="search-options">
+                <label><input type="radio" name="engine" value="all" checked> All Results</label>
+                <label><input type="radio" name="engine" value="web"> Web</label>
+                <label><input type="radio" name="engine" value="images"> Images</label>
+                <label><input type="radio" name="engine" value="videos"> Videos</label>
+                <label><input type="radio" name="engine" value="news"> News</label>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <h3>🚀 Quick Actions</h3>
+            <div class="action-buttons">
+                <button class="action-btn" onclick="quickSearch('weather')">🌤️ Weather</button>
+                <button class="action-btn" onclick="quickSearch('news')">📰 News</button>
+                <button class="action-btn" onclick="quickSearch('translate')">🌐 Translate</button>
+                <button class="action-btn" onclick="quickSearch('calculator')">🧮 Calculator</button>
+            </div>
+        </div>
+
+        <!-- Results Container -->
+        <div id="results-container" class="results-container" style="display: none;">
+            <div class="results-header">
+                <h2>Search Results by Nishanth Browser</h2>
+                <div class="results-info">
+                    <span id="results-count">0 results</span> • 
+                    <span class="privacy-notice">🛡️ No tracking • Ad-free results</span>
+                </div>
+            </div>
+
+            <!-- Tab Navigation for Results -->
+            <div class="results-tabs">
+                <button class="tab-btn active" data-tab="web">🌐 Web Results</button>
+                <button class="tab-btn" data-tab="images">🖼️ Images</button>
+            </div>
+
+            <!-- Web Results Tab -->
+            <div id="web-results" class="tab-content active">
+                <div id="results-list"></div>
+            </div>
+
+            <!-- Images Tab -->
+            <div id="image-results" class="tab-content">
+                <div class="image-crawler-status">
+                    <div id="crawler-status">Ready to crawl images from search results...</div>
+                    <div id="crawl-progress" style="display: none;">
+                        <div class="crawl-progress-bar">
+                            <div class="crawl-progress-fill"></div>
+                        </div>
+                        <div id="crawl-stats">Crawling: 0/0 sites</div>
+                    </div>
+                </div>
+                <div id="image-gallery" class="image-gallery"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Nishanth Browser Search Engine • Privacy First • Made with 💜</p>
+            <div class="privacy-badges">
+                <span class="badge">🚫 No Ads</span>
+                <span class="badge">🔒 No Tracking</span>
+                <span class="badge">🛡️ Privacy Protected</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+directories:
+  output: dist
+  buildResources: assets
+appId: com.nishanth.miniproject
+productName: MINI-PROJECT
+mac:
+  category: public.app-category.utilities
+  extendInfo:
+    CFBundleDisplayName: MINI-PROJECT
+    CFBundleName: MINI-PROJECT
+win:
+  target:
+    - nsis
+linux:
+  target:
+    - AppImage
+files:
+  - filter:
+      - main.js
+      - preload.js
+      - renderer/**/*
+      - search-engine/**/*
+      - node_modules/**/*
+      - package.json
+electronVersion: 28.3.3

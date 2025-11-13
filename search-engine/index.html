@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sudeeksha</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <div class="search-container">
+        <div class="search-header">
+            <div class="logo-container">
+                <h1>Neurophy </h1>
+            </div>
+            <p class="tagline"></p>
+        </div>
+
+        <div class="search-box-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search the web with ultimate privacy..." autofocus>
+                <button id="search-btn"></button>
+            </div>
+
+
+
+        <!-- Results Container -->
+        <div id="results-container" class="results-container" style="display: none;">
+            <div class="results-header">
+                <h2>Search Results by Team Nuerophy</h2>
+                <div class="results-info">
+                    <span id="results-count">0 results</span> • 
+                    <span class="privacy-notice">🛡️ No tracking • Ad-free results</span>
+                </div>
+            </div>
+
+            <!-- Tab Navigation for Results -->
+            <div class="results-tabs">
+                <button class="tab-btn active" data-tab="web">🌐 Web Results</button>
+                <button class="tab-btn" data-tab="images">🖼️ Images</button>
+            </div>
+
+            <!-- Web Results Tab -->
+            <div id="web-results" class="tab-content active">
+                <div id="results-list"></div>
+            </div>
+
+            <!-- Images Tab -->
+            <div id="image-results" class="tab-content">
+                <div class="image-crawler-status">
+                    <div id="crawler-status">Ready to crawl images from search results...</div>
+                    <div id="crawl-progress" style="display: none;">
+                        <div class="crawl-progress-bar">
+                            <div class="crawl-progress-fill"></div>
+                        </div>
+                        <div id="crawl-stats">Crawling: 0/0 sites</div>
+                    </div>
+                </div>
+                <div id="image-gallery" class="image-gallery"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p></p>
+            <div class="privacy-badges">
+            </div>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>
